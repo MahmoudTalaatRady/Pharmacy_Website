@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--webfonts-->
+<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+<!--//webfonts-->
+<title>view</title>
+		<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" type="image/x-icon" href="images/pageicon.png" />
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href="css/add-style.css" rel='stylesheet' type='text/css' />
+
+		<link href="css/style2.css" rel="stylesheet" type="text/css"  media="all" />
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="js/responsiveslides.min.js"></script>
+		<script src="js/functions.js"></script>
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+</head>
+
+			<style type="text/css">
+					.lable input[type="text"] {
+					width: 20%;
+				}
+
+				.lable button[type="submit"]{
+					width: 20%;
+					margin-left: 20px;
+				}
+
+				 .grid-view{
+					margin: 20px 335px 20px 335px;
+					width: 60%;					
+				}
+				.report-grid{
+					width: 80%;
+					margin-left: 100px;
+					margin-right: 100px;
+				}
+
+				.view-btn{
+					width: 20%;
+					margin-top: 20px;
+					margin-left: 650px;
+				}
+
+				hr{
+					margin-top: 0px;
+					margin-bottom: 3px;
+					width: 70%;
+					color: white;
+
+				}
+
+				.print-btn{
+					margin-top: 20px;
+					margin-left: 380px;
+			  background: #0f6d75;
+			  border: none;
+			  font-size: 1.3em;
+			  font-weight: 200;
+			  padding: 5px 0;
+			  width: 20%;
+			  border-radius: 3px;
+			  color: white;
+			  border-bottom: 4px solid #0f6d75;
+				}
+
+			.print-btn:hover{
+				background: #17a7b5;
+			  -webkit-animation: hop 1s;
+			  animation: hop 1s;
+			  cursor: pointer;
+
+			}
+
+
+
+			</style>
+
+
+<body onload="startTime()">
+	<div class="header">
+				<div class="wrap" id="wrap1">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" title="logo" /></a>
+				</div>
+				<div class="contact-info">
+					<ul>
+						<li>TODAY</li>
+						<li id ="date"></li>
+						<li id="time"></li>
+					</ul>
+					<form>
+						<button type="submit" class="float" id="b"> Log out</button>
+					</form>
+				</div>
+				<div class="clear"> </div>
+				</div>
+			</div>
+<div class="clear"> </div>
+				<ul id="topnav">
+					<div class="wrap" id="nav">
+			        <li><a href="index.html">Home</a></li>
+				        <li>
+				            <a href="about.html">Pharmacists</a>
+				            <span>
+				                <a href="">view</a> |
+				                <a href="">add</a> |
+				                <a href="">delete</a>
+				            </span>
+				        </li>
+				        <li>
+				            <a href="services.html">Physicians</a>
+				            <span>
+				                <a href="">view </a> |
+				                <a href="">add</a> |
+				                <a href="">delete</a>
+				            </span>
+				        </li>
+				        <li>
+				            <a href="#">Patients</a>
+				            <span>
+				                <a href="">view</a> |
+				                <a href="">add</a> |
+				                <a href="">delete</a> |
+				            </span>
+				        </li>
+				       
+        		<li><a href="contact.html">drugs</a>
+        			 <span>
+				                <a href="">view</a> |
+				                <a href="">add</a> |
+				                <a href="">delete</a> |
+				            </span>
+
+        		</li>
+        		<li><a href="contact.html">companies</a>
+        			 <span>
+				                <a href="">view</a> |
+				                <a href="">add</a> |
+				                <a href="">delete</a> |
+				            </span>
+
+        		</li>
+        		<li><a href="contact.html">Salesman</a>
+        			 <span>
+				                <a href="">view</a> |
+				                <a href="">add</a> |
+				                <a href="">delete</a> |
+				            </span>
+
+        		</li>
+        		<li><a href="contact.html">pharmacy</a>
+        			 <span>
+				                <a href="">view</a> |
+				                <a href="">add</a> |
+				                <a href="">delete</a> |
+				            </span>
+
+        		</li>
+
+        		</div>	
+    		</ul>
+    		<div class="clear"> </div>
+
+    		<form>
+        <button type="submit" class="view-btn">show all</button>
+    		</form>
+
+    		<!-- div for grid view-->
+
+
+    		<div class="grid-view"> 
+				
+    		</div>
+
+<!-- copy from here-->
+
+			<hr>
+    		<hr>
+
+    		<div class="grid-view"> 
+    			<div class="lable">
+
+					<form>
+						  <input type="text" class="text" placeholder="Q1" >
+						  <input type="text" class="text" placeholder="Q2" >
+						  <input type="text" class="text" placeholder="Q3" >
+						  <button type="submit">make report</button>
+					</form>
+				
+				</div>
+
+				<!-- div for report-->
+				<div class="report-grid" id="printableArea"> </div>
+
+             	<button type="button" onclick="printDiv('printableArea')" class="print-btn" >print report</button>
+
+    		</div>
+
+
+
+
+<!-- END copy-->
+
+
+   		<script type="text/javascript">
+		var d = new Date();
+		document.getElementById("date").innerHTML = d.toDateString();
+
+		</script>
+
+		<script>
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+</script>
+</body>

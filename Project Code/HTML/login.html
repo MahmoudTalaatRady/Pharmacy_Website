@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>pharmacy</title>
+       <link rel="shortcut icon" type="image/x-icon" href="images/pageicon.png" />
+       <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+       <link rel="stylesheet" href="css/login-style.css">
+      <script src="js/functions.js"></script>
+
+
+
+   
+  </head>
+
+  <body onload="startTime()">
+  
+    <div class="header">
+        <div class="wrap" id="wrap1">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" title="logo" /></a>
+        </div>
+         <div class="contact-info">
+          <ul>
+            <li>TODAY</li>
+            <li id ="date"></li>
+            <li id="time"></li>
+          </ul>
+        </div>
+                <div class="clear"> </div>
+        </div>
+      </div>
+
+   <div id="container">
+  <div class="login">
+    <div class="heading">
+    <h2>STAFF LOGIN</h2>
+    <form action="index.html">
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+        <input type="text" class="form-control" placeholder="Username or email" required>
+          </div>
+
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+          <input type="password" class="form-control" placeholder="Password" required>
+        </div>
+
+        <button type="submit" class="float"> Login</button>
+       </form>
+ 		 </div>
+  </div>
+  </div>
+  
+
+  <script type="text/javascript">
+    var d = new Date();
+    document.getElementById("date").innerHTML = d.toDateString();
+
+    </script>
+  
+  </body>
+</html>
